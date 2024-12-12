@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: journalApp
+  data:
+    mongodb:
+      uri: mongodb+srv://mangorahul321:ankit@cluster0.e3jq1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: journalApplication
+      auto-index-creation: true
+
+
+#spring.data.mongodb.uri= "mongodb+srv://mangorahul321:<db_password>@cluster0.al3hn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
+#spring.data.mongodb.uri=mongodb+srv://mangorahul321:ankit@cluster0.e3jq1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+#spring.data.mongodb.database=journalApplication
+#spring.data.mongodb.auto-index-creation=true
+#server.port=8080

@@ -14,7 +14,7 @@ import java.util.Map;
 @RequestMapping("/_journal")
 public class JournalEntryController {
 
-	private Map<String, JournalEntry> journalEntries = new HashMap<>();
+	private Map<ObjectId, JournalEntry> journalEntries = new HashMap<>();
 
 	@PostMapping
 	public boolean createEntry(
@@ -46,7 +46,7 @@ public class JournalEntryController {
 
 	@PutMapping("/id/{myId}")
 	public JournalEntry updateElementByID(
-			@PathVariable String myId,
+			@PathVariable ObjectId myId,
 			@RequestBody JournalEntry journalEntry
 	                                     ) {
 		return journalEntries.put(myId, journalEntry);

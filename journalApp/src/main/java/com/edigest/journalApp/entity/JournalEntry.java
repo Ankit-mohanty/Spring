@@ -1,37 +1,30 @@
 package com.edigest.journalApp.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+
+import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
-import java.util.Date;
-
-
-@Document(collation = "journalentry")
+@Data
+@Document(collection = "journal")
+@NoArgsConstructor
 //@FieldDefaults(level = AccessLevel.PRIVATE)
 public class JournalEntry {
-
 	@Id
-	private String id;
+	private ObjectId id;
 	private String title;
 	private String content;
 	private LocalDateTime date;
 
-	public JournalEntry( String id, String title, String content, LocalDateTime date ) {
-		this.id = id;
-		this.title = title;
-		this.content = content;
-		this.date = date;
-	}
 
-	public String getId() {
+	/* public ObjectId getId() {
 		return id;
 	}
 
-	public JournalEntry setId( String id ) {
+	public JournalEntry setId( ObjectId id ) {
 		this.id = id;
 		return this;
 	}
@@ -61,5 +54,5 @@ public class JournalEntry {
 	public JournalEntry setDate( LocalDateTime date ) {
 		this.date = date;
 		return this;
-	}
+	}*/
 }
